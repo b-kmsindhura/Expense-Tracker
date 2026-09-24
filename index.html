@@ -1096,16 +1096,7 @@
                 // Set authenticated user session for frontend navigation
                 localStorage.setItem("expense_tracker_user", email);
 
-                // Smooth simulated auth transition
-                setTimeout(() => {
-                    alertBanner.classList.add("success");
-                    alertBanner.style.display = "flex";
-                    alertText.innerText = `Welcome back! Redirecting to your dashboard...`;
-
-                    setTimeout(() => {
-                        window.location.href = "app.html";
-                    }, 600);
-                }, 800);
+                window.location.href = "app.html";
             });
 
             // Google Sign In Button Handler
@@ -1122,7 +1113,7 @@
                  */
                 setTimeout(() => {
                     localStorage.setItem("expense_tracker_user", "google.user@gmail.com");
-                    window.location.href = "index.html";
+                    window.location.href = "app.html";
                 }, 900);
             });
 
